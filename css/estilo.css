@@ -1,0 +1,231 @@
+:root{
+    --terceira-cor: #ad2418;
+    --quarta-cor: #f1900f;
+    --cor-fundo: #1f1f1f;
+    --terceira-cor: #5e1b1b;
+    --quarta-cor: #87161a;
+    --fonte-clara: #fff2e7;
+
+}
+@keyframes deslizar-esq-aparecer {
+    0%{opacity: 0;margin-left: 0%;}
+    100%{opacity: 1;margin-left: 20%;}
+}
+@keyframes aparecer {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+body{
+    background-color: var(--cor-fundo);
+    font-family: 'Raleway';
+}
+.container{
+    max-width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+.conteudo{
+    padding-bottom: 5rem;
+}
+/*CABEÇALHO*/
+nav ul{
+    background-color: var(--terceira-cor);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+nav li{
+    display: inline;
+}
+
+nav a{
+    display: inline-block;
+    color: var(--fonte-clara);
+    text-align: center;
+    padding: 20px 18px;
+    text-decoration: none;
+}
+nav a:hover{
+    background-color: #000;
+    transition: .3s;
+}
+#login{
+    float: right;
+    background-color: #000;
+}
+#login:hover{
+    background-color: #000;
+}
+/*banner*/
+#banner{
+    background-image: url("../img/PizzadeCalabresa.jpg");
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-size: cover;
+    background-blend-mode: multiply;
+    position: relative;
+    margin-top: 56px;
+    min-width: 100%;
+    padding-top: 100px;
+    padding-bottom: 200px;
+}
+#banner h1{
+    display: inline-block;
+    font-size: 4em;
+    text-align: center;
+    opacity: 0;
+    animation-name: deslizar-esq-aparecer;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    -webkit-text-stroke: 0.5px #fff;
+}
+#banner p{
+    margin-left: 20%;
+    margin-top: 50px;
+    font-size: 1.5em;
+    animation-name: aparecer;
+    opacity: 0;
+    animation-duration: 1.5s;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+}
+/*promocao*/
+#promocoes{
+    text-align: center;
+}
+/*pratos*/
+.horizontal h1{
+    color: var(--fonte-clara);
+    font-size: 1.6em;
+    font-weight: 700;
+    padding: 50px;
+    margin: auto;
+}
+#pratos{
+    text-align: center;
+}
+.prato:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition-duration: .3s;
+}
+.prato{
+    display: inline-block;
+    width: 300px;
+    padding: 8px 15px;
+    text-align: center;
+    background-color: #000;
+    margin: 30px;
+}
+.prato h1{
+    color: var(--fonte-clara);
+}
+.prato h2{
+    color: rgba(250, 250, 250,0.8);
+    font-weight: 700;
+    font-size: 1.5em;
+    padding-bottom: 10px;
+}
+.prato img{
+    width: 250px;
+    height: 170px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    object-fit: cover;/*Corta a imagem para caber no height definido*/
+}
+.btn-horizontal{
+    background-color: #000;
+    width: 80%;
+    margin: auto;
+    color: var(--fonte-clara);
+    padding: 12px;
+}
+.btn-horizontal:hover{
+    transform: scale(1.018);
+    transition-duration: .3s;
+    cursor: pointer;
+}
+footer{
+    background-color: var(--terceira-cor);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    color: var(--fonte-clara);
+}
+#footer-endereco{
+    padding-top: 8px;
+}
+#footer-fone{
+    padding: 8px;
+}
+#contato{
+    padding: 50px;
+    align-content: center;
+}
+.form-box h1{
+    color: var(--fonte-clara);
+    font-size: 1.6em;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.form-box{
+    width: 80%;
+    margin: auto;
+    color: var(--fonte-clara);
+}
+input[type=text], input[type=email],input[type=tel],input[type=date],input[type=password], select, textarea {
+    width: 70%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+input[type=text], input[type=email], input[type=tel],input[type=password]{
+    border: none;
+    border-bottom: 2px solid #fff;
+    background-color: var(--cor-fundo);
+    color: var(--fonte-clara);
+}
+input[type=submit]{
+    padding: 12px;
+    background-color: var(--cor-fundo);
+    color: var(--fonte-clara);
+    border-style: none;
+    border: 2px solid #fff;
+
+}
+input[type=submit]:hover{
+    background-color: #181818;
+    transition-duration: .3s;
+    cursor: pointer;
+}
+textarea{
+    border: 2px solid #fff;
+    background-color: var(--cor-fundo);
+    color: var(--fonte-clara);
+    width: 70%;
+    margin-top: 10px;
+    font-family: sans-serif;
+}
+input:focus, textarea:focus{
+    outline: none;
+    background-color: #181818;
+    transition-duration: .3s;
+}
+label{
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+.row{
+    text-align: center;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

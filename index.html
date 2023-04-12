@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Josefin+Sans&family=Lato&family=Nanum+Gothic&family=Raleway:wght@500&display=swap&family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <title>Lanchonete</title>
+    <script>
+        function abrirPagina(link){
+            window.location.href = "pizza.html"
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#" >Home</a></li>
+                    <li><a href="#">Cardápio</a></li>
+                    <li><a href="./login.html" id="login">Login</a></li>
+                </ul>
+            </nav>
+            <div id="banner">
+                <h1>Pizzaria Leonardo</h1>
+                <p>O sabor da tradição</p>
+            </div>
+        </header>
+        <div class="conteudo">
+            <section id="promocoes">
+                <div class="horizontal"><h1>Promoções</h1></div>
+                <div class="prato">
+                    <h1>Portuguesa</h1>
+                    <img src="img/pizza-a-portuguesa-1-840x480.jpeg" alt="">
+                    <h2>R$24,99</h2>
+                </div>
+                <div class="prato">
+                    <h1>Marguerita</h1>
+                    <img src="img/3n0tfy3kn0jv6lkafc4cyc41u.jpg" alt="">
+                    <h2>R$29,99</h2>
+                </div>
+                <div class="prato">
+                    <h1>Italiana</h1>
+                    <img src="img/medium_1757685d-eb59-4085-9e19-3d44a4b2806c.jpg" alt="">
+                    <h2>R$24,99</h2>
+                </div>
+            </section>
+            <section id="pratos">
+                <div class="horizontal"><h1>Cardápio</h1></div>
+                <div class="prato" onclick="abrirPagina(this)">
+                    <h1>Bacon</h1>
+                    <img src="img/Pizza-Pizzaria-Forno-Forza-Express.jpg" alt="">
+                    <h2>R$39,99</h2>
+                </div>
+                
+                <div class="prato">
+                    <h1>Hamburguer artesanal</h1>
+                    <img src="img/230411.jpg" alt="">
+                    <h2>R$39,99</h2>
+                </div>
+                <div class="prato">
+                    <h1>Salame</h1>
+                    <img src="img/PizzadeCalabresa.jpg" alt="">
+                    <h2>R$34,99</h2>
+                </div>
+                <div class="btn-horizontal">
+                    <h1>Ver cardápio completo</h1>
+                </div>
+            </section>
+            <section id="contato">
+                <div class="form-box">
+                    <h1>Entre em contato</h1>
+                    <form action="">
+                        <div class="row">
+                            <div>
+                                <input type="text" name="fname" autocomplete="off" placeholder="Nome">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div>
+                                <input type="email" name="femail"  autocomplete="off" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div>
+                                <input type="tel" name="ftel" autocomplete="off" placeholder="Telefone">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div>
+                                <textarea name="fmensagem" id="f-msg" rows="8" placeholder="Digite sua mensagem"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <input type="submit" name="fsubmit" value="Enviar" id="f-enviar">
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <div id="footer-endereco">Mauá-SP, Rua Jose da Silva, Nº123</div>
+            <div id="footer-fone">11 99999-9999</div>
+        </footer>
+    </div>
+</body>
+</html>
