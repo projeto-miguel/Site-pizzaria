@@ -4,8 +4,9 @@
     --cor-fundo: #1f1f1f;
     --terceira-cor: #5e1b1b;
     --quarta-cor: #87161a;
-    --fonte-clara: #fff2e7;
-
+    --fonte: #fff2e7;
+    --destaque: #181818;
+    --cor-fundo-2: #0e0e0e;
 }
 @keyframes deslizar-esq-aparecer {
     0%{opacity: 0;margin-left: 0%;}
@@ -41,7 +42,7 @@ nav li{
 
 nav a{
     display: inline-block;
-    color: var(--fonte-clara);
+    color: var(--fonte);
     text-align: center;
     padding: 20px 18px;
     text-decoration: none;
@@ -81,23 +82,44 @@ nav a:hover{
     animation-fill-mode: forwards;
     -webkit-text-stroke: 0.5px #fff;
 }
-#banner p{
-    margin-left: 20%;
-    margin-top: 50px;
-    font-size: 1.5em;
+#apresentacao{
+    background-color: var(--cor-fundo-2);
+}
+#apresentacao h1{
+    color: var(--fonte);
+    text-align: center;
+    font-size: 2em;
     animation-name: aparecer;
     opacity: 0;
     animation-duration: 1.5s;
     animation-delay: 2.5s;
     animation-fill-mode: forwards;
+    padding: 50px;
+}
+.texto-esquerda{
+    color: var(--fonte);
+    float: left;
+    width: 50%;
+}
+.texto-esquerda p{
+    padding: 15px;
+    opacity: .85;
+    font-size: 1em;
+    position: relative;
+}
+.direita{
+    width: 50%;
 }
 /*promocao*/
 #promocoes{
     text-align: center;
 }
 /*pratos*/
+.horizontal{
+    width: 100%;
+}
 .horizontal h1{
-    color: var(--fonte-clara);
+    color: var(--fonte);
     font-size: 1.6em;
     font-weight: 700;
     padding: 50px;
@@ -120,7 +142,7 @@ nav a:hover{
     margin: 30px;
 }
 .prato h1{
-    color: var(--fonte-clara);
+    color: var(--fonte);
 }
 .prato h2{
     color: rgba(250, 250, 250,0.8);
@@ -139,7 +161,7 @@ nav a:hover{
     background-color: #000;
     width: 80%;
     margin: auto;
-    color: var(--fonte-clara);
+    color: var(--fonte);
     padding: 12px;
 }
 .btn-horizontal:hover{
@@ -153,7 +175,7 @@ footer{
     width: 100%;
     bottom: 0;
     text-align: center;
-    color: var(--fonte-clara);
+    color: var(--fonte);
 }
 #footer-endereco{
     padding-top: 8px;
@@ -166,7 +188,7 @@ footer{
     align-content: center;
 }
 .form-box h1{
-    color: var(--fonte-clara);
+    color: var(--fonte);
     font-size: 1.6em;
     text-align: center;
     font-weight: 700;
@@ -175,7 +197,7 @@ footer{
 .form-box{
     width: 80%;
     margin: auto;
-    color: var(--fonte-clara);
+    color: var(--fonte);
 }
 input[type=text], input[type=email],input[type=tel],input[type=date],input[type=password], select, textarea {
     width: 70%;
@@ -187,32 +209,32 @@ input[type=text], input[type=email], input[type=tel],input[type=password]{
     border: none;
     border-bottom: 2px solid #fff;
     background-color: var(--cor-fundo);
-    color: var(--fonte-clara);
+    color: var(--fonte);
 }
 input[type=submit]{
     padding: 12px;
     background-color: var(--cor-fundo);
-    color: var(--fonte-clara);
+    color: var(--fonte);
     border-style: none;
     border: 2px solid #fff;
 
 }
 input[type=submit]:hover{
-    background-color: #181818;
+    background-color: var(--destaque);
     transition-duration: .3s;
     cursor: pointer;
 }
 textarea{
     border: 2px solid #fff;
     background-color: var(--cor-fundo);
-    color: var(--fonte-clara);
+    color: var(--fonte);
     width: 70%;
     margin-top: 10px;
     font-family: sans-serif;
 }
 input:focus, textarea:focus{
     outline: none;
-    background-color: #181818;
+    background-color: var(--destaque);
     transition-duration: .3s;
 }
 label{
